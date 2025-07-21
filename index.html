@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Shizuru&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -8,31 +11,49 @@
     <title>Yorozuya Sign-up</title>
 </head>
 <body>
-    <div class="left container">
-        <img>
-        <p>Photo by Yorozuya corp</p>
+    <div class="left">
+        <img id="bg-img" src="yorozuya-sign-up.jpg">
+        <div class="logo"> 
+            <img src="gintama-logo.png">
+            <p>Yorozuya</p>
+        </div>
+        <div class="credits">Photo by 
+            <a href="https://gintama.fandom.com/wiki/Lesson_433">Sorachi Lesson 433</a></div>
     </div>
-    <div class="right container">
-        <h1>This is not a real online service! Sign-up</h1>
+    <div class="right">
+        <div class="intro">
+            <p>Hey you! Yeah you reading this page right now! Ever feel like you need some assistance making something of yourself,
+                how about giving us a ring.</p>
+            <p>Sign-up with us and we'll improve your life!</p>
+            <br>
+            <p>What are you waiting for, the boxes don't fill themselves.</p>
+        </div>
         
-        <form>
-            <label for="first-name">FIRST NAME</label>
-            <input id="first-name" name="first-name" type="text">
-            <label for="last-name">LAST NAME</label>
-            <input id="last-name" name="last-name" type="text">
-
-            <label for="email">EMAIL</label>
-            <input id="email" name="email" type="email">
-            <label for="phone-number">PHONE NUMBER</label>
-            <input id="phone-number" name="phone-number" type="number">
-
-            <label for="password">PASSWORD</label>
-            <input id="password" name="password" type="password">
-            <label for="confirm-password">CONFIRM PASSWORD</label>
-            <input id="confirm-password" name="confirm-password" type="password">
-        </form>
-        <button type="submit">Create Account</button>
-        <p>Already have an account? <a href="link">Log in</a></p>
+        <div class="form">
+            <p class="form-header">Sign-up Now</p>
+            <form action="#" method="post" id="sign-up">
+                <p>
+                    <label for="first-name">*FIRST NAME</label><br>
+                    <input id="first-name" name="first-name" type="text" required>
+                </p>
+                <label for="last-name">*LAST NAME</label>
+                <input id="last-name" name="last-name" type="text" required>
+                
+                <label for="email">*EMAIL</label>
+                <input id="email" name="email" type="email" required>
+                <label for="phone-number">PHONE NUMBER</label>
+                <input id="phone-number" name="phone-number" type="number" placeholder="01234 567890">
+                
+                <label for="password">*PASSWORD</label>
+                <input id="password" name="password" type="password" required>
+                <label for="confirm-password">*CONFIRM PASSWORD</label>
+                <input id="confirm-password" name="confirm-password" type="password" required>
+            </form>
+        </div>
+        <div class="submit">
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a href="link">Log in</a></p>
+        </div>
     </div>
 </body>
 </html>

@@ -1,8 +1,122 @@
 :root{
+    --white: #f9fefe;
+    --text-black: #05181a;
+    --link-colour: #ea7c81;
+    --button-blue: #37cad8;
+    --primary-blue: #37cad8;
+    --secondary-red: #ea9b93;
+    --grey-text: #494949;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: merienda, shizuru, serif;
+}
+
+a:visited, a:link{
+    text-decoration: none;
+    color:var(--link-colour);
 
 }
 
 body{
-    display:flex;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-content: center;
+    background-color: lightgrey;
+    line-height: 1.5rem;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.left{
+    position:relative;
+}
+
+#bg-img{
+    width: auto;
+    height: min(920px, 100vh);
+    object-fit: cover;
+}
+
+.logo{
+    box-sizing: border-box;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: rgba(10, 10, 10, 0.5);
+}
+
+.logo > img{
+    width: 70px;
+}
+
+.logo > p {
+    padding-left: 30px;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.credits {
+    position: absolute;
+    height: 2rem;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    color: var(--white);
+    background-color: rgba(10, 10, 10, 0.5);
+}
+
+.form {
+    padding: 20px 20px;
+    background-color: var(--white);
+    border: 1px black solid;
+    box-shadow: 5px 10px #b9b8b8;
+    margin-bottom: 10px;
+}
+
+.intro, .submit{
+    margin-left: 20px;
+}
+.intro, .form-header {
+    font-weight: bold;
+}
+
+.form-header {
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border:none;
     
 }
+form > label {
+    font-weight: bold;
+    color: var(--grey-text);
+}
+
+button{
+    background-color: var(--secondary-red);
+    color: var(--white);
+    font-weight: bold;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px var(--grey-text);
+}
+
