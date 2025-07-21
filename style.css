@@ -20,6 +20,10 @@ a:visited, a:link{
 
 }
 
+.required::before{
+    content: '*'
+}
+
 body{
     margin: 0px;
     padding: 0px;
@@ -38,6 +42,7 @@ body{
 
 .left{
     position:relative;
+    height:100vh
 }
 
 #bg-img{
@@ -79,35 +84,63 @@ body{
     background-color: rgba(10, 10, 10, 0.5);
 }
 
-.form {
-    padding: 20px 20px;
-    background-color: var(--white);
-    border: 1px black solid;
-    box-shadow: 5px 10px #b9b8b8;
-    margin-bottom: 10px;
-}
 
 .intro, .submit{
     margin-left: 20px;
 }
-.intro, .form-header {
+.intro, legend{
     font-weight: bold;
 }
-
-.form-header {
-    margin-bottom: 10px;
-}
-
 form {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;
-    border:none;
-    
+    border: none;
 }
-form > label {
+
+fieldset {
+    padding: 30px 20px 30px 20px;
+    position: relative;
+    background-color: var(--white);
+    box-shadow: 5px 5px 5px #b9b8b8;
+    border:none;
+
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-end;
+    row-gap: 28px;
+}
+
+legend{
+    top: 3%;
+    position: absolute;
+    left: 20px;
+}
+
+label {
     font-weight: bold;
     color: var(--grey-text);
+}
+
+fieldset > .row{
+    display:flex;
+    justify-content: flex-start;
+    column-gap: 5rem;
+    width: 100%;
+}
+
+input:invalid{
+    border: 1px var(--secondary-red) solid;
+}
+input:focus {
+    border: 1px var(--primary-blue) solid;
+    box-shadow: 3px 4px #dddddd;
+}
+
+.form-footer {
+    margin-left:20px;
 }
 
 button{
@@ -118,5 +151,6 @@ button{
     margin-bottom: 10px;
     border-radius: 10px;
     border: 1px var(--grey-text);
+    box-shadow: 1px 1px 1px var(--grey-text);
 }
 

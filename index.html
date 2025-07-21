@@ -28,32 +28,46 @@
             <br>
             <p>What are you waiting for, the boxes don't fill themselves.</p>
         </div>
-        
-        <div class="form">
-            <p class="form-header">Sign-up Now</p>
-            <form action="#" method="post" id="sign-up">
-                <p>
-                    <label for="first-name">*FIRST NAME</label><br>
-                    <input id="first-name" name="first-name" type="text" required>
-                </p>
-                <label for="last-name">*LAST NAME</label>
-                <input id="last-name" name="last-name" type="text" required>
-                
-                <label for="email">*EMAIL</label>
-                <input id="email" name="email" type="email" required>
-                <label for="phone-number">PHONE NUMBER</label>
-                <input id="phone-number" name="phone-number" type="number" placeholder="01234 567890">
-                
-                <label for="password">*PASSWORD</label>
-                <input id="password" name="password" type="password" required>
-                <label for="confirm-password">*CONFIRM PASSWORD</label>
-                <input id="confirm-password" name="confirm-password" type="password" required>
-            </form>
-        </div>
-        <div class="submit">
-            <button type="submit">Create Account</button>
-            <p>Already have an account? <a href="link">Log in</a></p>
-        </div>
+        <form action="#" method="post" id="sign-up">
+            <fieldset>
+                <legend>Sign-up Now!</legend>
+                <div class="row">
+                    <label for="first-name">
+                        <p class="required">FIRST NAME</p>
+                        <input id="first-name" name="first-name" type="text" placeholder="Gintoki" required>
+                    </label>
+
+                    <label for="last-name">
+                        <p class="required">LAST NAME</p>
+                        <input id="last-name" name="last-name" type="text" placeholder="Sakata" required>
+                    </label>
+                </div>
+                <div class="row">
+                    <label for="email">
+                        <p class="required">EMAIL</p>
+                        <input id="email" name="email" type="email" placeholder="gintama@yoruzuya.com" required>
+                    </label>
+                    <label for="phone-number">
+                        <p>PHONE NUMBER</p>
+                        <input id="phone-number" name="phone-number" type="number" placeholder="01234 567890">
+                    </label>
+                </div>    
+                <div class="row">
+                    <label for="password">
+                        <p class="required">PASSWORD</p>
+                        <input id="password" name="password" type="password" minlength="6" required>
+                    </label>
+                    <label for="confirm-password">
+                        <p class="required">CONFIRM PASSWORD</p>
+                        <input id="confirm-password" name="confirm-password" type="password" minlength="6" required>
+                    </label>
+                </div>
+            </fieldset>
+            <div class="form-footer">
+                <button type="submit">Create Account</button>
+                <p>Already have an account? <a href="link">Log in</a></p>
+            </div>
+        </form>
     </div>
 </body>
 </html>
