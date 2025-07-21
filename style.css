@@ -25,8 +25,6 @@ a:visited, a:link{
 }
 
 body{
-    margin: 0px;
-    padding: 0px;
     display: flex;
     align-content: center;
     background-color: lightgrey;
@@ -47,7 +45,7 @@ body{
 
 #bg-img{
     width: auto;
-    height: min(920px, 100vh);
+    height: 100vh;
     object-fit: cover;
 }
 
@@ -68,15 +66,15 @@ body{
 }
 
 .logo > p {
-    padding-left: 30px;
+    margin-left: 30px;
     color: var(--white);
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 48px;
 }
 
 .credits {
     position: absolute;
-    height: 2rem;
+    height: 32px;
     bottom: 0px;
     width: 100%;
     text-align: center;
@@ -95,22 +93,22 @@ form {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width:100vw;
     gap: 20px;
     border: none;
 }
 
 fieldset {
-    padding: 30px 20px 30px 20px;
+    padding: 40px 20px 20px 20px;
     position: relative;
     background-color: var(--white);
     box-shadow: 5px 5px 5px #b9b8b8;
     border:none;
-
     display:flex;
     flex-direction: column;
     align-items:center;
     justify-content: flex-end;
-    row-gap: 28px;
+    row-gap: 1rem;
 }
 
 legend{
@@ -125,7 +123,7 @@ label {
 }
 
 fieldset > .row{
-    display:flex;
+    display: flex;
     justify-content: flex-start;
     column-gap: 5rem;
     width: 100%;
